@@ -4,7 +4,7 @@ function valid(e)
 {
     e.preventDefault();
     let registro = document.getElementById('registro')
-    let nombre = document.getElementById('nombre')
+    let nombre = document.getElementById('nombres')
     let apellido = document.getElementById('apellido')
     let correo = document.getElementById('correo')
     let telefono = document.getElementById('telefono')
