@@ -39,7 +39,7 @@ class Conexion
 
         }
 
-        return $conect; echo (var_dump($conect));
+        return $conect; 
     }
 }
 
