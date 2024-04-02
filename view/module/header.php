@@ -48,9 +48,32 @@
                     
                 </ul>
                 </div>
-                <a class="btn btn-outline-success" href="index.php?Route=login">inicio de sesion</a>
-                     <div style="width: 10px; height: 10px;"></div>
-                <a class="btn btn-outline-success" href="index.php?Route=registro">registrarte</a>
+                <?php
+                session_start();
+                try
+                {
+                    if(isset($_SESSION['login']) and $_SESSION['login'] == true)
+                    {
+                       echo('<a class="btn btn-outline-success" href="index.php?Route=login">Cerrar Sesion</a>'); 
+                       
+                       
+    
+                    }
+                    else
+                    {
+                        echo('<a class="btn btn-outline-success" href="index.php?Route=login">inicio de sesion</a>
+                        <div style="width: 10px; height: 10px;"></div>
+                   <a class="btn btn-outline-success" href="index.php?Route=registro">registrarte</a>');
+                   
+                   
+                    }
+                }
+                catch(Exception $e)
+                {
+
+                }
+                ?>
+                
                 </div>
         </nav>
     </div>
@@ -86,17 +109,11 @@
             break; 
 
 
-            default:
-                include_once 'bienvenidos.php';
-            break; 
+             
  
 
         }
     }
       
-    else
-    {
-        include_once 'bienvenidos.php';
-    }
-
+    
     ?>

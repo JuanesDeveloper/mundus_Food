@@ -7,7 +7,7 @@ public function getVerifyPass( $user, $pass){
     try{
         
         $objDtoUser = new User();
-        $objDtoUser -> setNombre($user);
+        $objDtoUser -> setCorreo($user);
         $objDtoUser -> setContraseña($pass);
 
         $objDaoUser = new UserModel($objDtoUser);

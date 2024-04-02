@@ -1,4 +1,6 @@
-
+<?php
+require_once 'view/module/header.php'
+?>
 
             <!-- logo-->
             <div class="container">

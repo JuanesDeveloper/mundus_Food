@@ -1,4 +1,6 @@
-
+<?php
+require_once 'view/module/header.php'
+?>
           <!-- tarjetas -->
           <div class="container mt-5">
               

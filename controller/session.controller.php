@@ -7,16 +7,23 @@ class Session
     public function getIntro()
     {
         if (isset($_SESSION['login']) and $_SESSION['login'] == true)
+        
     {
-            require_once '/view/module/header.php';
+        header('Location: index.php?Route=bienvenidos');
+    exit;
     }
+    
     else
     {
-
-        require_once "view/module/header.php";
+        $_SESSION['login'] = false;
+    
+        header('Location: index.php?Route=registro');
+    exit;
     }
+
 
     }
 }
 
 ?>
+

@@ -1,6 +1,8 @@
 
 
-
+<?php
+require_once 'view/module/header.php'
+?>
 
 	<!--   Tarjetas-->
 		<div class="title-cards">

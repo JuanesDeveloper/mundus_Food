@@ -1,5 +1,7 @@
 
-
+<?php
+require_once 'view/module/header.php'
+?>
     <section style="background-image: url(/view/img/fondo_registro.avif) ;" class="form-register">
      
 
@@ -18,7 +20,7 @@
 
         <p><a href="/login.php">Ya Tengo Cuenta</a></p>
         <?php
-        if (isset($_POST['nombres'])){
+        if (isset($_POST['nombres'])){//Para enviar datos a la base
             $objCtrUser = new UserController();
             $objCtrUser -> setCrearUsuario(
               $_POST['nombres'],

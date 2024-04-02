@@ -1,5 +1,7 @@
 
-          
+<?php
+require_once 'view/module/header.php'
+?>    
         <!-- carrusel -->
       <div class="container">
           <div id="carouselExampleCaptions" class="carousel slide">

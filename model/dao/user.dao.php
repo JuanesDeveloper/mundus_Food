@@ -24,7 +24,7 @@ class UserModel
     public function  getLogin() //recibe la info de la base de datos
     {
 
-        $sql = "SELECT * FROM Usuario WHERE nombre = ? AND contraseña = ?";
+        $sql = "SELECT * FROM Usuario WHERE nombre = ? AND contrasena = ?";
         try {
 
             $objConection = new Conexion();
