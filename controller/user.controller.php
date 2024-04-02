@@ -34,7 +34,7 @@ public function getVerifyPass( $user, $pass){
 
     }
 }
-    public function SetCrearUsuario($nombre, $apellido, $correo, $contraseña, $telefono){
+    public function SetCrearUsuario($nombre, $apellido, $correo, $telefono, $contraseña){
 
         try 
         {
