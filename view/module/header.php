@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="view/css/registro.css">
   <link rel="stylesheet" href="view/css/registro1.css">
   <link rel="stylesheet" href="view/css/registro2.css">
+  <link rel="stylesheet" href="view/css/styleMain.css">
+  <link rel="stylesheet" href="view/css/styleSL.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>MUNDUS FOOD </title>
 </head>
@@ -49,14 +51,23 @@
                 </ul>
                 </div>
                 <?php
-                session_start();
+                
                 try
-                {
+                { //session_start();
                     if(isset($_SESSION['login']) and $_SESSION['login'] == true)
                     {
-                       echo('<a class="btn btn-outline-success" href="index.php?Route=login">Cerrar Sesion</a>'); 
                        
-                       
+                          
+                       echo(  '<form method="post">
+                       <input type="hidden" class="nav-item" name="close">
+                       <button type="submit" class="btn btn-outline-light px-3 fs-6">Cerrar Sesion</button>
+                     </form>'); 
+                      
+                       if (isset($_POST['close'])) {
+                        $_SESSION['login'] = false;
+                        unset($_SESSION['login']);
+                        header('location: index.php');
+                      }
     
                     }
                     else
@@ -108,12 +119,19 @@
                 include_once 'inicio_sesion.php';
             break; 
 
+            case 'carrito':
+                include_once 'carrito.php';
+            break;
 
-             
- 
-
+            default:
+            include_once 'bienvenidos.php';
+            break;
         }
+
     }
-      
+      else
+      {
+        include_once 'bienvenidos.php';
+      }
     
     ?>

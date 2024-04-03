@@ -24,13 +24,13 @@ class UserModel
     public function  getLogin() //recibe la info de la base de datos
     {
 
-        $sql = "SELECT * FROM Usuario WHERE nombre = ? AND contrasena = ?";
+        $sql = "SELECT * FROM usuario WHERE correo = ? AND contrasena = ?";
         try {
 
             $objConection = new Conexion();
 
             $stmt  = $objConection->get_connect()->prepare($sql); //va recibir todos los datos
-            $stmt->bindParam(1, $this->nombre, PDO::PARAM_STR);
+            $stmt->bindParam(1, $this->correo, PDO::PARAM_STR);
             $stmt->bindParam(2, $this->contrasena, PDO::PARAM_STR);
             $stmt->execute();
             $resultado = $stmt;

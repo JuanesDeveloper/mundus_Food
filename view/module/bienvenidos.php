@@ -114,7 +114,7 @@ require_once 'view/module/header.php'
                   <p> En nuestra sede prseencia de mundus food, vas a viajar por el mundo atraves de tu paladar.Vas a poder jugar trivias, rompecabezas, juego de punteria y muchos otros mas.
                   No te pierdas la oportunidad de visitarnos y tener una escapa por el mundo  </p>
                 <div>
-                    <button type="button" class="btn btn-outline-warning">Conoce mas </button>
+                    <a href="index.php?Route=nosotros" type="button" class="btn btn-outline-warning">Conoce mas </a>
                 </div>
               </div>
 
@@ -128,29 +128,7 @@ require_once 'view/module/header.php'
           <br>
          
           <!--formulario -->
-        <div class="container">
-              <h5> Registrate! Tendras acceso a  de nuestras promociones y eventos </h5>
-          <form>
-              <div class="row mt-5">
-                  <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Correo electrico </label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">Gmail/hotmail</div>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                     <input type="password" class="form-control" id="exampleInputPassword1">
-                  </div>
-
-                  <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">recordar contraseña</label>
-                  </div>
-                      <button type="submit" class="btn btn-primary">Enviar</button>
-             </div>
-          </form>
-        </div>
+        
 
           
             

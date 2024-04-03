@@ -9,16 +9,14 @@ class Session
         if (isset($_SESSION['login']) and $_SESSION['login'] == true)
         
     {
-        header('Location: index.php?Route=bienvenidos');
-    exit;
+       include_once 'view/module/bienvenidos.php';
     }
     
     else
     {
-        $_SESSION['login'] = false;
     
-        header('Location: index.php?Route=registro');
-    exit;
+        include_once 'view/module/header.php';
+
     }
 
 
