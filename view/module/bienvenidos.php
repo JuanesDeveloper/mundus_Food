@@ -21,6 +21,7 @@ require_once 'view/module/header.php'
                    </p>
                 </div>
               </div>
+              
 
               <div class="carousel-item">
                     <img src="view/img/3 comidas.png" class="d-block w-100" alt="...">
@@ -77,7 +78,7 @@ require_once 'view/module/header.php'
                     <div class="card-body">
                         <h5 class="card-title">MENU</h5>
                         <p class="card-text"> Viaja por el mundo atraves del tu paladar </p>
-                        <a href="#" class="btn btn-primary">Menu aqui</a>
+                        <a href="index.php?Route=menu" class="btn btn-primary">Menu aqui</a>
                     </div>
                   </div>
              </div>
@@ -89,7 +90,7 @@ require_once 'view/module/header.php'
                     <div class="card-body">
                         <h5 class="card-title">Reservas</h5>
                         <p class="card-text">Celebra tus mejores momentos y crea recuerdos inolvidables </p>
-                        <a href="#" class="btn btn-primary">Reserva aqui </a>
+                        <a href="index.php?Route=reserva" class="btn btn-primary">Reserva aqui </a>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@ require_once 'view/module/header.php'
                     <div class="card-body">
                         <h5 class="card-title">Sobre Nosotros</h5>
                         <p class="card-text">Conoce quienes somos, nuestra ubicacion y contactos</p>
-                        <a href="#" class="btn btn-primary">Sobre nosotros </a>
+                        <a href="index.php?Route=nosotros" class="btn btn-primary">Sobre nosotros </a>
                     </div>
                   </div>
             </div>
@@ -126,6 +127,8 @@ require_once 'view/module/header.php'
        </div>
 
           <br>
+
+          <a  href="index.php?Route=Admin">Vista Administrador</a>
          
           <!--formulario -->
         

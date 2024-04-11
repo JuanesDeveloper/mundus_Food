@@ -69,14 +69,14 @@ require_once 'view/module/header.php'
            <!-- formulario de reservacion-->
             <form>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">Mesa</label>
+                <input type="number" name= "mesa"  class="form-control" id="mesa" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">  Este correo sera utilizado para la confirmacion de su reserva.</div>
               </div>
 
               <div class="mb-3">
                   <label for="exampleFormControlSelect1" class="form-label">Cantidad de personas</label> 
-                    <select class="form-select" id="exampleFormControlSelect1">
+                    <select  class="form-select" id="cant_personas" name="cant_personas">
                         <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option>
                     </select> 
                   <div id="emailHelp" class="form-text"> En caso de ser mas de 5 personas por favor, comunicarse con el resturante</div>
@@ -84,12 +84,12 @@ require_once 'view/module/header.php'
 
               <div class="mb-3">
                  <label for="exampleInputcalendar" class="form-label">Fecha</label>
-                 <input type="date" class="form-control"  id="calendar"  name="calendar">
+                 <input type="date" class="form-control"  id="fecha"  name="fecha">
               </div>
 
               <div class="mb-3">
                  <label for="exampleInputhora" class="form-label">Hora</label>
-                 <input type="time" class="form-control"  id="time"  name="time">
+                 <input type="time" class="form-control"  id="hora"  name="hora">
               </div>
 
               <div class="mb-3 ">
@@ -101,7 +101,37 @@ require_once 'view/module/header.php'
          </div>
 
 
-           
+         <?php
+
+
+            $data = new UserController();
+               if (gettype($data) > 0) {
+              foreach  ($data->ValidUsuario() as $key => $value)
+              {
+                if(isset($value['Id'])){
+
+                  $id_usuario = $value['Id'];
+
+
+                }
+              }}
+           ?>
+         
+         <?php
+         
+        if (isset($_POST['mesa'])){//Para enviar datos a la base
+            $objCtrUser = new ReservaController();
+            $objCtrReserva -> SetCrearReserva(
+              
+              $_POST['id_usuario'],
+              $_POST['mesa'],
+              $_POST['cant_personas'],
+              $_POST['fecha'],
+              $_POST['hora']
+              
+            );
+          }
+        ?>
         
 
 </body>

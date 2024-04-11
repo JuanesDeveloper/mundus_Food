@@ -63,5 +63,29 @@ public function getVerifyPass( $user, $pass){
             echo "Error al crear el usuario" . $e->getMessage();
         }
     }
+
+    public function ValidUsuario()
+    {
+       $respuesta = false;
+
+       try
+       {
+
+        $objDtoUser = new User();
+            $objDaoUser = new UserModel($objDtoUser);
+            $respuesta = $objDaoUser -> mldSearchAllUser()->fetchAll();
+
+       }
+
+       catch(PDOException $e)
+       {
+
+        echo "Error on the creation of the 
+            controller of show all " . $e->getMessage();
+
+       }
+
+       return $respuesta;
+    }
 }
 ?>

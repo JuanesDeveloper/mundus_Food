@@ -95,6 +95,11 @@
     {
         switch($_GET['Route']) 
         {
+
+          case 'Admin':
+            include_once 'Admin/dashboard.php';
+        break; 
+
             case 'bienvenidos':
                 include_once 'bienvenidos.php';
             break; 

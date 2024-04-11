@@ -64,4 +64,21 @@ class UserModel
 
         return $validacion;
     }
+
+    public function mldSearchAllUser(){
+        $respon = false;
+        $sql  = "call PMostrarUsuario()";
+        try {
+            $objCon = new Conexion();
+            $stmt = $objCon->get_connect() -> prepare($sql);
+            $stmt -> execute();
+            $respon = $stmt;
+        } catch (PDOException $e) {
+            echo "Ha ocurrido un error al mostrar los datos en el dao " . $e -> getMessage() ;
+        }//end try-catch
+        return $respon;
+
+    
+}
+
 }

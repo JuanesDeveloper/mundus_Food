@@ -1,10 +1,11 @@
 
 <?php
+
 require_once 'view/module/header.php'
 ?>
-    <section style="background-image: url(/view/img/fondo_registro.avif) ;" class="form-register">
+    <section style="background-image: url(view/img/fondo_registro.avif) ;" class="form-register">
      
-
+<body>
          <h4>Formulario Registro Usuario</h4>
          <form id="registro" method="post" action="">
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingresa tu nombre">
